@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HCPartnersMvc.Models.Registro>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <br>
+    <a href="ExportAction"><input type="button" value="Exportar" /></a>
+    <br>&nbsp;
+</div>
+<div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Razon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aplicale)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Razon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aplicale)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
